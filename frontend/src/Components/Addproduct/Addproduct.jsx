@@ -84,6 +84,7 @@ const AddProduct = () => {
 
   return (
     <div>
+
       <style>
         {`
         .addproduct {
