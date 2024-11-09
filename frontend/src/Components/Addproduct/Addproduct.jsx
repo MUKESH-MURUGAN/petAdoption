@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './AddProduct.css'; // Ensure the file is in the same directory
-import up from './Assets/up.png'; // Ensure the image file exists in Assets folder
+import './AddProduct.css'; 
+import up from './Assets/up.png'; 
 
 const AddProduct = () => {
   const [productDetails, setProductDetails] = useState({
@@ -48,7 +48,7 @@ const AddProduct = () => {
     formData.append('District', productDetails.District);
 
     try {
-      const uploadResponse = await fetch('https://petadoption-eu75.onrender.com/upload', {
+      const uploadResponse = await fetch('https://petadoption-dinr.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -57,7 +57,7 @@ const AddProduct = () => {
       if (responseData.success) {
         const product = { ...productDetails, image: responseData.image_url };
 
-        const productResponse = await fetch('https://petadoption-eu75.onrender.com/addproduct', {
+        const productResponse = await fetch('https://petadoption-dinr.onrender.com/addproduct', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
