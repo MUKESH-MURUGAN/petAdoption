@@ -25,9 +25,9 @@ mongoose.connection.on("connected", () => {
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'mukeshm.22cse@kongu.edu', // Use your actual email
-        pass: '9943821756', // Use an app password if 2FA is enabled
-    }
+        user: 'navinv.22cse@kongu.edu',
+        pass: '9788665770', // Use the generated App Password
+    },
 });
 
 // Multer storage for file uploads

@@ -48,7 +48,7 @@ const AddProduct = () => {
     formData.append('District', productDetails.District);
 
     try {
-      const uploadResponse = await fetch('https://petadoption-dinr.onrender.com/upload', {
+      const uploadResponse = await fetch('https://petadoption-tovi.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -57,7 +57,7 @@ const AddProduct = () => {
       if (responseData.success) {
         const product = { ...productDetails, image: responseData.image_url };
 
-        const productResponse = await fetch('https://petadoption-dinr.onrender.com/addproduct', {
+        const productResponse = await fetch('https://petadoption-tovi.onrender.com/addproduct', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

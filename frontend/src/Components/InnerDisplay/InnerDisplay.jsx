@@ -37,7 +37,7 @@ const InnerDisplay = (props) => {
     };
 
     try {
-      await fetch('http://localhost:4000/send-email', {
+      await fetch('https://petadoption-tovi.onrender.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -102,7 +102,7 @@ const InnerDisplay = (props) => {
          
            <div className="content">
 
-           <input
+  <input
   type="date"
   value={`${year}-${month.padStart(2, "0")}-${date.padStart(2, "0")}`}
   onChange={(e) => {
