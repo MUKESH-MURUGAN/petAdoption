@@ -7,6 +7,8 @@ import Navbar from '../ANavbar/Navbar';
 const RemoveProduct = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [error, setError] = useState('');
+  const [searchQuery, setSearchQuery] = useState(''); // State for search query
+  const [filteredProduct, setFilteredProduct] = useState(null); // State for filtered product
 
   const fetchInfo = async () => {
     try {
@@ -17,7 +19,7 @@ const RemoveProduct = () => {
       const data = await response.json();
       setAllProducts(data);
     } catch (err) {
-      console.error("Failed to fetch products:", err);
+      console.error('Failed to fetch products:', err);
       setError('Failed to fetch products');
     }
   };
@@ -37,7 +39,8 @@ const RemoveProduct = () => {
         throw new Error(`Failed to remove product with id ${id}`);
       }
 
-      await fetchInfo();  // Refresh the product list after removal
+      await fetchInfo(); // Refresh the product list after removal
+      setFilteredProduct(null); // Clear the filtered product
     } catch (err) {
       console.error(`Error removing product with id ${id}:`, err);
       setError(`Error removing product with id ${id}`);
@@ -48,42 +51,52 @@ const RemoveProduct = () => {
     fetchInfo();
   }, []);
 
-  return (
-  
-  <div>
-  <Navbar/>
-  <Slider/>
+  // Search by ID functionality
+  const handleSearch = () => {
+    const product = allProducts.find((item) => item.id.toString() === searchQuery);
+    setFilteredProduct(product);
+  };
 
-    <div className="listproduct">
-      <h1>All Pet List</h1>
-      {error && <p className="error-message">{error}</p>} {/* Display any errors */}
-      <div className="listproduct-format-main">
-        {/* <p>Name</p> */}
-        {/* <p>Title</p> */}
-        {/* <p>Age</p>
-        <p>State</p>
-        <p>District</p>
-        <p>Remove</p> */}
-        {/* <p>Vareity : {props.name}</p>
-      <p>Age : {props.age}</p>
-      <p>State : {props.state}</p>
-      <p>District : {props.District}</p> */}
-      </div>
-      <div className="list-all-product">
-        <hr />
-        {allProducts.length > 0 ? (
-          allProducts.map((product, index) => (
-            <React.Fragment key={index}>
+  return (
+    <div>
+      {/* <Navbar />
+      <Slider /> */}
+
+      <div className="listproduct">
+      <div className="header">
+  <h1>All Pet List</h1>
+  {/* Search input and button */}
+  <div className="search-container">
+    <input
+      type="text"
+      placeholder="Search by ID"
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      className="search-input"
+    />
+    <button onClick={handleSearch} className="search-button">
+      Search
+    </button>
+  </div>
+</div>
+
+
+        {error && <p className="error-message">{error}</p>} {/* Display any errors */}
+
+        <div className="list-all-product">
+          <hr />
+          {filteredProduct ? (
+            <React.Fragment>
               <div className="listproduct-format-main listproduct-format">
-                <img src={product.image} alt="" className="listproduct-icon" />
-                <p>Id:{product.id}</p>
-                <p>Name:{product.name}</p>
-                <p>Age:{product.age}</p>
-                <p>State:{product.state}</p>
-                <p>District:{product.District}</p> 
+                <img src={filteredProduct.image} alt="" className="listproduct-icon" />
+                <p>Id: {filteredProduct.id}</p>
+                <p>Name: {filteredProduct.name}</p>
+                <p>Age: {filteredProduct.age}</p>
+                <p>State: {filteredProduct.state}</p>
+                <p>District: {filteredProduct.District}</p>
 
                 <img
-                  onClick={() => removeProduct(product.id)}
+                  onClick={() => removeProduct(filteredProduct.id)}
                   src={delete1}
                   alt="Remove"
                   className="listproduct-remove"
@@ -91,12 +104,32 @@ const RemoveProduct = () => {
               </div>
               <hr />
             </React.Fragment>
-          ))
-        ) : (
-          <p>No products available</p>
-        )}
+          ) : searchQuery ? (
+            <p>No product found with the given ID</p>
+          ) : (
+            allProducts.map((product, index) => (
+              <React.Fragment key={index}>
+                <div className="listproduct-format-main listproduct-format">
+                  <img src={product.image} alt="" className="listproduct-icon" />
+                  <p>Id: {product.id}</p>
+                  <p>Name: {product.name}</p>
+                  <p>Age: {product.age}</p>
+                  <p>State: {product.state}</p>
+                  <p>District: {product.District}</p>
+
+                  <img
+                    onClick={() => removeProduct(product.id)}
+                    src={delete1}
+                    alt="Remove"
+                    className="listproduct-remove"
+                  />
+                </div>
+                <hr />
+              </React.Fragment>
+            ))
+          )}
+        </div>
       </div>
-    </div>
     </div>
   );
 };

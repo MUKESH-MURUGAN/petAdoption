@@ -67,3 +67,12 @@
     background: #eb5a3c;
   }
   
+
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  

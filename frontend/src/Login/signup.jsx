@@ -12,19 +12,29 @@ function Login() {
   const handleSignUp = (e) => {
     e.preventDefault();
 
+    // Check if password meets length requirements
+    if (newPassword.length < 6) {
+      setErrorMessage('Password must be at least 6 characters long.');
+      return;
+    }
+
+    // Check if passwords match
     if (newPassword !== confirmPassword) {
       setErrorMessage('Passwords do not match. Please try again.');
       return;
     }
 
-    // Navigate to the home page or save credentials logic
+    // If validation passes, clear the error and navigate
+    setErrorMessage('');
     navigate('/home');
   };
 
   return (
     <div className="login-container">
       <form className="login-form" onSubmit={handleSignUp}>
-      <center><h1>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Pet Adoption &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</h1></center>
+        <center>
+          <h1>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; Pet Adoption &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</h1>
+        </center>
         <h2>Sign Up</h2>
 
         {/* Email Input */}
