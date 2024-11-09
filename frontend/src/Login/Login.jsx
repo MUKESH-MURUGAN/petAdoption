@@ -19,7 +19,7 @@ function Login() {
 
     setError(''); // Clear error message if validation passes
 
-    if (email === "admin@gmail.com" && password === "9685") {
+    if (email === "admin@gmail.com" && password === "968585") {
       navigate('/admin');
     } else {
       navigate('/home');
