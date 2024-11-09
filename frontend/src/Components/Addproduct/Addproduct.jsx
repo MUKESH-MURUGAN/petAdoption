@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import './AddProduct.css'; 
-import up from './Assets/up.png'; 
+import './AddProduct.css'; // Ensure the file is in the same directory
+import up from './Assets/up.png'; // Ensure the image file exists in Assets folder
 
 const AddProduct = () => {
   const [productDetails, setProductDetails] = useState({
