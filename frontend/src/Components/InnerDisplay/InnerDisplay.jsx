@@ -102,24 +102,16 @@ const InnerDisplay = (props) => {
          
            <div className="content">
 
-            <input 
-              type="text" 
-              placeholder="Enter Date (DD)" 
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-            />
-            <input 
-              type="text" 
-              placeholder="Enter Month (MM)" 
-              value={month}
-              onChange={(e) => setMonth(e.target.value)}
-            />
-            <input 
-              type="text" 
-              placeholder="Enter Year (YYYY)" 
-              value={year}
-              onChange={(e) => setYear(e.target.value)}
-            />
+           <input
+  type="date"
+  value={`${year}-${month.padStart(2, "0")}-${date.padStart(2, "0")}`}
+  onChange={(e) => {
+    const [newYear, newMonth, newDate] = e.target.value.split("-");
+    setYear(newYear);
+    setMonth(newMonth);
+    setDate(newDate);
+  }}
+/>
             <input 
               type="email" 
               placeholder="Enter Your Email" 
