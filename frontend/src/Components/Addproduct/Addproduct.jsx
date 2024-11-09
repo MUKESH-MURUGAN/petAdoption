@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './AddProduct.css'; // Ensure the file is in the same directory
+// import './AddProduct.css'; // Ensure the file is in the same directory
 import up from './Assets/up.png'; // Ensure the image file exists in Assets folder
 
 const AddProduct = () => {
