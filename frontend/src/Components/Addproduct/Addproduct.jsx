@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import './AddProduct.css'; // Ensure the file is in the same directory
+
 import up from './Assets/up.png'; // Ensure the image file exists in Assets folder
 
 const AddProduct = () => {
@@ -84,6 +84,83 @@ const AddProduct = () => {
 
   return (
     <div>
+      <style>
+        {`
+        .addproduct {
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 500px;
+          padding: 10px 10px;
+          margin: 0 auto;
+          border-radius: 6px;
+          background: rgb(171, 171, 171);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .addproduct-items {
+          width: 100%;
+          color: rgb(0, 0, 0);
+          font-size: 16px;
+          margin-top: 10px;
+        }
+        .addproduct-field {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+        .addproduct-field p {
+          margin: 0 0 5px 0;
+        }
+        .addproduct-field input,
+        .addproduct-field select {
+          box-sizing: border-box;
+          width: 100%;
+          max-width: 500px;
+          height: 50px;
+          border-radius: 4px;
+          padding-left: 15px;
+          border: 1px solid rgb(0, 0, 0);
+          outline: none;
+          font-family: monospace;
+          color: rgb(0, 0, 0);
+          font-size: 14px;
+        }
+        .addproduct-image {
+          height: 120px;
+          width: 120px;
+          border-radius: 10px;
+          object-fit: contain;
+          margin: 20px 0px;
+        }
+        .imaged {
+          padding: 30px;
+          height: 60px;
+          width: 60px;
+        }
+        .addproduct-button {
+          margin-top: 20px;
+          width: 160px;
+          height: 60px;
+          border-radius: 6px;
+          background: aquamarine;
+          border: none;
+          color: rgb(0, 0, 0);
+          cursor: pointer;
+          font-size: 25px;
+          font-weight: 500;
+        }
+        .addproduct-button:hover {
+          background-color: aqua;
+          color: rgb(31, 0, 141);
+        }
+        .down {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        `}
+      </style>
       <center>
         <h1>Pet Adoption</h1>
         <h3>Add Your Pet</h3>
