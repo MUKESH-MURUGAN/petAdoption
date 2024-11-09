@@ -10,7 +10,7 @@ const RemoveProduct = () => {
 
   const fetchInfo = async () => {
     try {
-      const response = await fetch('http://localhost:4000/allproducts');
+      const response = await fetch('https://petadoption-eu75.onrender.com/allproducts');
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
@@ -24,7 +24,7 @@ const RemoveProduct = () => {
 
   const removeProduct = async (id) => {
     try {
-      const response = await fetch('http://localhost:4000/removeproduct', {
+      const response = await fetch('https://petadoption-eu75.onrender.com/removeproduct', {
         method: 'POST',
         headers: {
           Accept: 'application/json',
