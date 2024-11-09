@@ -1,0 +1,88 @@
+/* General container styles */
+.pets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card styles */
+  .pets-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Image styles */
+  .pets-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007bff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Information styles */
+  .pets-info {
+    width: 100%;
+  }
+  
+  .pets-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .pets-info p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .pets-info p strong {
+    color: #000;
+  }
+  
+  /* Loading message styles */
+  .loading,
+  .error-message {
+    font-size: 18px;
+    color: #ff4d4f;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Add media query for responsiveness */
+  @media (max-width: 768px) {
+    .pets-card {
+      padding: 15px;
+    }
+  
+    .pets-image {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .pets-info h2 {
+      font-size: 20px;
+    }
+  
+    .pets-info p {
+      font-size: 14px;
+    }
+  }
+  

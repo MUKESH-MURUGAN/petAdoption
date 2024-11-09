@@ -1,0 +1,355 @@
+.displayProduct {
+    display: flex;
+    margin: 0px 170px;
+    flex-wrap: wrap; /* Ensure elements wrap on smaller screens */
+}
+
+
+
+.display-Right {
+    padding: 30px;
+}
+
+.display-Right h {
+    font-size: larger;
+    font-family: monospace;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .displayProduct {
+        margin: 0px 50px;
+    }
+
+    
+
+    .display-Right {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .displayProduct {
+        margin: 0px 50px;
+    }
+
+   
+
+    .display-Right {
+        padding: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .displayProduct {
+        margin: 0px 20px;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    
+
+    .display-Right {
+        padding: 10px;
+        text-align: center; 
+    }
+
+    .display-Right h1 {
+        font-size: 1.5em;
+
+    .display-Right .details h2 {
+        font-size: 1.2em; 
+    }
+}
+}
+.details p{
+    font-size: 25px;
+    font-family: monospace;
+}
+.details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .details div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+  }
+  
+  .details h2 {
+    margin-right: 10px; 
+    font-weight: bold;
+  }
+  
+  .details p {
+    margin: 0;
+  }
+  .submit{
+    padding: 8px;
+    margin: 30px;
+    border-radius: 6px;
+    border-color: rgb(138, 245, 255);
+    background-color: rgb(0, 0, 0);
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    width: 150px;
+    border-width: 2.5px;
+
+  }
+  .submit:hover{
+    color:rgb(0, 0, 0);
+    background-color: rgb(85, 255, 105);
+    border-color: rgb(0, 0, 0);
+    box-shadow: 50px;
+    width: 150px;
+    border-width: 2.5px;
+    font-size: 25px;
+    font-weight: 600;
+
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .details-item {
+    display: flex;
+    margin-bottom: 10px;
+    background-color: rgb(224, 252, 252);
+    border-color: rgb(0, 0, 0);
+    border-width: 2.5px;
+    border-radius: 6px;
+    padding: 5px;
+
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of everything */
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    max-width: 90%; /* Ensure popup is responsive */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    text-align: center;
+    position: relative; /* For positioning close button */
+  }
+  
+  textarea {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    resize: vertical; /* Allow users to resize the textarea vertically */
+  }
+  
+  .button {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Add gap between buttons */
+  }
+  
+  .b1, .b2 {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .b1 {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .b2 {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .b1:hover {
+    background-color: #218838;
+  }
+  
+  .b2:hover {
+    background-color: #c82333;
+  }
+  .all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    flex-direction: row;
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    margin: 40px;
+    
+  }
+  .content input{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px;
+    margin: 6px;
+  }
+
+
+  /* new */
+/* Right Section Container */
+/* Main Display Container */
+.displayProduct {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center all content horizontally */
+  padding: 20px;
+}
+
+/* Left Section - Display Image */
+.display-Left {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  margin-bottom: 20px; /* Add space between the image and details */
+}
+
+/* Image Styling */
+.display-Image {
+  width: 200px; /* Image size */
+  height: 200px; /* Image size */
+  border-radius: 50%; /* Circular image */
+  overflow: hidden; /* Hide any overflowing parts of the image */
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire circular area */
+}
+
+/* Right Section - Display Details */
+.display-Right {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center the details horizontally */
+  flex-direction: column;
+  align-items: flex-start; /* Align the details to the left */
+  padding: 20px;
+  background: #fafafa; /* Light background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Details Card */
+.details-card {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* Title Styling */
+.details-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #555;
+  text-align: center; /* Center the title */
+  margin-bottom: 20px;
+}
+
+/* Details List */
+.details {
+  display: flex;
+  flex-direction: column; /* Stack details vertically */
+  gap: 15px;
+}
+
+.details-item {
+  display: flex;
+  justify-content: space-between; /* Space between label and value */
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0; /* Light border */
+}
+
+.details-item h2 {
+  font-size: 18px;
+  color: #6c757d; /* Softer color for labels */
+  font-weight: 600;
+  margin: 0;
+}
+
+.details-item span {
+  font-size: 16px;
+  color: #333; /* Darker color for details */
+  font-weight: 500;
+}
+
+/* Adopt Button */
+.adopt-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(90deg, #80c9ff, #66b3ff); /* Light gradient button */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.adopt-button:hover {
+  background: linear-gradient(90deg, #66b3ff, #4fa3e7); /* Slightly darker hover effect */
+  transform: translateY(-2px);
+}
+
+.adopt-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .details-title {
+    font-size: 20px;
+  }
+
+  .details-item h2 {
+    font-size: 16px;
+  }
+
+  .details-item span {
+    font-size: 14px;
+  }
+
+  .adopt-button {
+    font-size: 16px;
+  }
+}
+
+
+
+
+

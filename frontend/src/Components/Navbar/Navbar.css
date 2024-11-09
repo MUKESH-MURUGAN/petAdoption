@@ -1,0 +1,106 @@
+.all{
+    display: flex;
+    justify-content:space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    margin: 0;
+
+}
+.menu-title{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap:50px;
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    font-family:'Serif';
+
+
+}
+.menu-title li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: 3px;
+    cursor: pointer;
+
+
+
+    
+}
+.menu-title hr{
+border: none;
+width: 80%;
+height: 3px;
+border-radius: 10px;
+background-color: rgb(0, 0, 0);
+
+}
+
+
+
+.navbar {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .navbar-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-item {
+    position: relative;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  
+  .menu-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-link:hover {
+    color: #007bff;
+  }
+  
+  .menu-item.active .menu-link {
+    color: #007bff;
+  }
+  
+  .menu-indicator {
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+    background-color: #007bff;
+    border-radius: 2px;
+  }
+  
+  /* Profile Button Styling */
+  /* .logout-button .menu-link {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .loguot-button .menu-link:hover {
+    color: #28a745;
+  } */
+  

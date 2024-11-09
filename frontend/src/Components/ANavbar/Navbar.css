@@ -1,0 +1,40 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 15px 60px;
+    box-shadow: 0 1px 3px -2px rgb(0, 0, 0);
+    margin-bottom: 1px;
+    background: white;
+
+
+}
+
+
+
+
+/* Styling for the Logout Link with the 'logout' class */
+.menu-link.logout {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    background-color: #ff4d4f; /* Red background */
+    padding: 10px 20px; /* Add space around text */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth hover effect */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-block; /* Block layout for spacing */
+  }
+  
+  /* Hover Effects */
+  .menu-link.logout:hover {
+    background-color: #d9363e; /* Darker red on hover */
+    transform: scale(1.05); /* Slightly enlarge */
+  }
+  
+
+
+
+
+
