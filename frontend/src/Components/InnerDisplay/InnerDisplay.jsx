@@ -37,7 +37,7 @@ const InnerDisplay = (props) => {
     };
 
     try {
-      await fetch('https://petadoption-tovi.onrender.com/send-email', {
+      await fetch('https://petadoption-sgtp.onrender.com/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -56,9 +56,11 @@ const InnerDisplay = (props) => {
   return (
     <div className="displayProduct">
       <div className="display-Left">
-        <div className="display-Image">
-          <img className="main-image" src={product?.image} alt={product?.name} />
-        </div>
+      <img 
+  className="main-image" 
+  src={`https://petadoption-sgtp.onrender.com/images/${product?.image}`} 
+  alt={product?.name} 
+/>
       </div>
       <div className="display-Right">
       <div className="details-card">
