@@ -56,11 +56,9 @@ const InnerDisplay = (props) => {
   return (
     <div className="displayProduct">
       <div className="display-Left">
-      <img 
-  className="main-image" 
-  src={`https://petadoption-sgtp.onrender.com/images/${product?.image}`} 
-  alt={product?.name} 
-/>
+        <div className="display-Image">
+          <img className="main-image" src={product?.image} alt={product?.name} />
+        </div>
       </div>
       <div className="display-Right">
       <div className="details-card">
